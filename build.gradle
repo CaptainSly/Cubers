@@ -1,0 +1,52 @@
+plugins {
+    // Apply the java-library plugin to add support for Java Library
+    id 'java'
+    id 'eclipse'
+}
+
+repositories {
+	mavenLocal()
+	mavenCentral()
+	maven { url 'https://jitpack.io' }
+	maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+	
+    jcenter()
+}
+
+ext {
+		gdxVersion = '1.9.11'
+		igcVersion = '1.0.0'
+		tpVersion = '5.0.0'
+		tplVersion = '1.2.0'
+		ashVersion = '1.7.3'
+		visVersion = '1.4.6'
+		aiVersion = '1.8.1'
+		vfsVersion = '2.6.0'
+		zstdVersion = '1.4.5-6'
+		airVersion  = '0.17'
+		jimVersion = '1.1'
+		truVersion = '0.12.2'
+}
+
+dependencies {
+    implementation "com.badlogicgames.gdx:gdx:$gdxVersion"
+	implementation "com.badlogicgames.gdx:gdx-freetype:$gdxVersion"
+	implementation "com.badlogicgames.gdx:gdx-controllers:$gdxVersion"
+
+	implementation "com.kotcrab.vis:vis-ui:$visVersion"
+	
+	implementation "com.badlogicgames.ashley:ashley:$ashVersion"
+	
+	implementation "com.rafaskoberg.gdx:typing-label:$tplVersion"
+	implementation "com.strongjoshua:libgdx-inGameConsole:$igcVersion"
+	implementation "com.github.raeleus.TenPatch:tenpatch:$tpVersion"
+	
+	implementation 'com.github.Sleaker:jlibnoise:v1.0'
+	
+	implementation "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
+  	implementation "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+  	implementation "com.badlogicgames.gdx:gdx-controllers-desktop:$gdxVersion"
+  	implementation "com.badlogicgames.gdx:gdx-controllers-platform:$gdxVersion:natives-desktop"
+  	implementation "com.badlogicgames.gdx:gdx-freetype-platform:$gdxVersion:natives-desktop"
+	
+}
